@@ -7,20 +7,25 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 
 public class Gryphon implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
 		System.out.println("Gryphon engaged!");
-		//TODO: system to copy over config/external datapacks goes here
+		//TODO: make a recursive file-copy system for exporting configs
 
-		final Path configs = FabricLoader.getInstance().getConfigDirectory().toPath();
-		try (final InputStream export = Gryphon.class.getResourceAsStream("config")) {
-			Files.copy(export, configs);
-		} catch (final IOException e) {
-			throw new RuntimeException("Extracting from 'config' to " + configs, e);
-		}
+//		final FabricLoader loader = FabricLoader.getInstance();
+//		final Path export = loader.getModContainer("gryphon")
+//				.orElseThrow(IllegalStateException::new).getPath("config");
+//		final Path configs = loader.getConfigDirectory().toPath();
+//		try (final InputStream stream = Files.newInputStream(export)) {
+//			Files.copy(stream, configs, StandardCopyOption.REPLACE_EXISTING);
+//		} catch (final IOException e) {
+//			System.out.println("Config not exported: " + e);
+//			e.printStackTrace();
+//		}
 
 	}
 }

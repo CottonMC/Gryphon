@@ -54,6 +54,8 @@ dependencies {
 
 processResources {
 	inputs.property "version", project.version
+	inputs.property "name", project.ext.name
+	inputs.property "description", project.ext.description
 	from(sourceSets.main.resources.srcDirs) {
 		include "fabric.mod.json"
 		expand version: project.version
