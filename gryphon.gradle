@@ -1,0 +1,26 @@
+repositories {
+    //mavenCentral, Fabric, Cotton, and CurseForge mavens are already included!
+}
+ext {
+    //What to call the pack in Mod Menu.
+    name = "Gryphon"
+    //What to name the modpack jar.
+    projectName = "gryphon"
+    //The version of the modpack. Should be valid SemVer.
+    version = "1.0.0"
+    //Description of the modpack. Should be one or two sentences.
+    description = "A basic pack template."
+    //Put all the Maven identifiers of all your mods here, separated by commas.
+    //They will be included in this dev environment as well as packed into the built jar.
+    //You will need to also include all dependencies here, since nested jars don't nest deep.
+    mavenMods = [
+            "net.fabricmc:fabric:0.2.7+build.122",
+            "io.github.prospector.modmenu:ModMenu:1.3.3-62"
+    ]
+    //Put the file names of any mod jars in "/libs" here, separated by commas.
+    //In /libs, make sure you have both the dev and prod versions,
+    //and that the dev version has "-dev" appended to its name.
+    fileMods = [
+
+    ]
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "gryphon",
+  "version": "$version",
+
+  "name": "$name (Gryphon)",
+  "icon": "assets/gryphon/icon.png",
+  "description": "$description\nAssembled single-jar modpack using Gryphon",
+  "licence": "MIT",
+  "contact": {
+    "sources": "https://github.com/CottonMC/Gryphon"
+  },
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.cottonmc.gryphon.Gryphon"
+    ]
+  },
+  "requires": {
+    "fabricloader": ">=0.4.0"
+  },
+  "custom": {
+    "modmenu:api": true
+  }
+}
