@@ -25,5 +25,8 @@ However, not all mods are on a maven. In those cases, you'll need to import comp
 ## Adding assets and data
 Resource and data packs are some of the most helpful tools for a modpack maker configuring mods to their liking (autoamtically setting up config files outside of data packs coming soon). Gryphon can load any resources put in the `src/main/resources/assets` folder and data in the `src/main/resources/data` folder. Treat these folders like the home folders of a data or resource pack, respectively. These will override resources from other mods and vanilla. To change the vanilla recipe for a bucket, for example, you would put a new recipe json at `src/main/resources/data/minecraft/recipes/iron_bucket.json`.
 
+### Default config
+Gryphon does not yet support shipping with default config. This will be changed as soon as possible. In the meantime, you can prepare for this by putting the configs you want in `src/main/resources/config`.
+
 ### Exporting
-When you're ready to share your pack, run `gradlew build` in the Gryphon directory. (note: currently broken, fixing very soon)
+When you're ready to share your pack, run `gradlew build` in the Gryphon directory. Take the resulting `<pack name>-<version>.jar` and share it with your players! To run the pack, all they need to do is install Fabric Loader and drop the jar in the `mods` folder.
