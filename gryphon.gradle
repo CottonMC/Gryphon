@@ -8,7 +8,7 @@ ext {
     projectName = "gryphon"
     //The version of the modpack. Should be valid SemVer.
     version = "1.0.0"
-    
+
     // These values can be found at https://modmuss50.me/fabric.html
     //The version of Minecraft to use. Will not be valid SemVer unless it is a full release
     minecraftVersion = "1.14"
@@ -16,10 +16,10 @@ ext {
     yarnVersion = "1"
     //The Fabric Loader version to use.
     loaderVersion = "0.4.1+build.123"
-    
+
     //Description of the modpack. Should be one or two sentences.
     description = "A basic pack template."
-    
+
     //Put all the Maven identifiers of all your mods here, separated by commas.
     //They will be included in this dev environment as well as packed into the built jar.
     //You will need to also include all dependencies here, since nested jars don't nest deep.
@@ -34,3 +34,6 @@ ext {
 
     ]
 }
+
+//Feel free to put any code for automated publishing here.
+//Just remember to be aware of included mods' distribution licensing.
