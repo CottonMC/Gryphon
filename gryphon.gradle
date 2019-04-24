@@ -1,13 +1,15 @@
 repositories {
     //mavenCentral, Fabric, Cotton, and CurseForge mavens are already included!
+    maven { url 'https://maven.jamieswhiteshirt.com/libs-release/' }
+//    maven { url 'https://www.jitpack.io' }
 }
 ext {
     //What to call the pack in Mod Menu.
-    name = "Gryphon"
+    name = "Gryphon Test"
     //What to name the modpack jar. Will not affect the mod ID.
-    projectName = "gryphon"
+    projectName = "gryphon-test"
     //The version of the modpack. Should be valid SemVer.
-    version = "1.0.0"
+    version = "1.1.0"
 
     // These values can be found at https://modmuss50.me/fabric.html
     //The version of Minecraft to use. Will not be valid SemVer unless it is a full release
@@ -18,20 +20,59 @@ ext {
     loaderVersion = "0.4.1+build.123"
 
     //Description of the modpack. Should be one or two sentences.
-    description = "A basic pack template."
+    description = "A test of the Gryphon pack maker."
 
     //Put all the Maven identifiers of all your mods here, separated by commas.
     //They will be included in this dev environment as well as packed into the built jar.
     //You will need to also include all dependencies here, since nested jars don't nest deep.
     mavenMods = [
-            "net.fabricmc:fabric:0.2.7+build.122",
-            "io.github.prospector.modmenu:ModMenu:1.3.3-62"
+        "net.fabricmc:fabric:0.2.7+build.127",
+        "io.github.prospector.modmenu:ModMenu:1.4.1-74",
+        "io.github.cottonmc:cotton:0.6.1+1.14-SNAPSHOT",
+        "io.github.prospector.silk:SilkAPI:1.2.4-43",
+//        "epicurean:epicurean:gastronomy:2.1.1+1.14", //mixin weirdness, works nested in prod (uncomment on build)
+        "hwyla:Hwyla-fabric-1.14:1.9.16:60",
+        "aquarius:aquarius:1.3.0+1.14",
+        "com.jamieswhiteshirt:rtree-3i-lite-fabric:0.2.0",
+        "com.jamieswhiteshirt:clothesline-fabric:0.0.16",
+//        "tumble-dryer:Tumble Dryer:1.1", //gradle is upset by the space, doesn't nest properly
+        "stockpile:stockpile:1.0.1+1.14:Pre5",
+        "net.fabricmc:fabric-language-kotlin:1.3.30-SNAPSHOT",
+        "composable-automation:composable:automation:0.2.0+mc1.14",
+        "roughly-enough-items:RoughlyEnoughItems:2.7.11.97",
+        "auto-config:auto:config:1.0.0+mc1.14",
+        "cloth-config:ClothConfig:0.2.1.14",
+        "metatips:metatips:1.1.2+1.14pre2",
+        "cursed-chests:CursedChests:1.1.9",
+        "proletarian:proletarian:0.6.0+mc1.14:pre4",
+        "fabriblocks:fabriblocks:1.1.3",
+        "blockus:blockus:1.1.6",
+        "shulkerboxtooltip:shulkerboxtooltip:1.1.2+1.14.0",
+        "mouse-wheelie:mousewheelie:1.0.8+1.14_Pre:Release_5",
+        "level-up-hp:level-up:hp:4.0.0+mc1.14",
+        "i-am-very-smart:i-am-very-smart:0.5.0+mc1.14:pre5",
+//        "arcanemagic:ArcaneMagic:1.0:beta2", //mapping weirdness, doesn't work nested in prod yet
+//        "com.github.Boundarybreaker:CutsceneAPI:0f52600e94", //mapping weirdness, doesn't work nested in prod yet
+        "multiblock-api:MultiBlockAPI:1.0.1:1",
+        "crochet:crochet:1.0.2",
+//        "nbt-crafting:nbtcrafting:1.1.8", //mixin weirdness, works nested in prod (uncomment on build)
+        "light-overlay:LightOverlay:1.1.0.6",
+        "cloth:ClothEvents:0.3.1.23",
+        "lil-tater:lil:tater:1.0.2",
+        "coal-nugget:coalnugget:1.0.0.1",
+        "simpleharvest:Harvest-1.14:fabric:1.0.4",
+        "draylars-battle-towers:battle:towers:1.0.3",
+        "fabric-furnaces:fabric:furnaces:1.0.1",
+        "ladysnake-illuminations:Illuminations:0.1.4:19w14b",
+        "extra-pieces:extrapieces:1.2.0",
+        "sodden:sodden:1.0.0.0",
+        "dulce-de-leche:dulcedeleche:1.2.2:30",
+        "more-berries:moreberries:1.1.3"
     ]
     //Put the file names of any mod jars in "/libs" here, separated by commas.
     //In /libs, make sure you have both the dev and prod versions,
     //and that the dev version has "-dev" appended to its name.
     fileMods = [
-
     ]
 }
 
