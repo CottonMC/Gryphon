@@ -11,11 +11,11 @@ ext {
 
     // These values can be found at https://modmuss50.me/fabric.html
     //The version of Minecraft to use. Will not be valid SemVer unless it is a full release
-    minecraftVersion = "1.14"
+    minecraftVersion = "1.14.3"
     //The Yarn mapping version to use. Just the number at the very end, not including the Minecraft version.
-    yarnVersion = "1"
+    yarnVersion = "12"
     //The Fabric Loader version to use.
-    loaderVersion = "0.4.1+build.123"
+    loaderVersion = "0.4.8+build.155"
 
     //Description of the modpack. Should be one or two sentences.
     description = "A basic pack template."
@@ -24,8 +24,8 @@ ext {
     //They will be included in this dev environment as well as packed into the built jar.
     //You will need to also include all dependencies here, since nested jars don't nest deep.
     mavenMods = [
-            "net.fabricmc:fabric:0.2.7+build.122",
-            "io.github.prospector.modmenu:ModMenu:1.3.3-62"
+            "net.fabricmc.fabric-api:fabric-api:0.3.0+build.191",
+            "io.github.prospector:modmenu:1.6.3+build.100"
     ]
     //Put the file names of any mod jars in "/libs" here, separated by commas.
     //In /libs, make sure you have both the dev and prod versions,

@@ -7,7 +7,7 @@ buildscript {
 		}
 	}
 	dependencies {
-		classpath "net.fabricmc:fabric-loom:0.2.1-SNAPSHOT"
+		classpath "net.fabricmc:fabric-loom:0.2.4-SNAPSHOT"
 	}
 }
 
@@ -33,6 +33,7 @@ minecraft {
 
 repositories {
 	mavenCentral()
+	maven { url "http://server.bbkr.space:8081/artifactory/libs-release" }
 	maven { url "http://server.bbkr.space:8081/artifactory/libs-snapshot" }
 	maven { url "https://minecraft.curseforge.com/api/maven" }
 	flatDir { dirs 'libs' }
@@ -43,11 +44,11 @@ dependencies {
 	mappings "net.fabricmc:yarn:"+project.ext.minecraftVersion+"+build."+project.ext.yarnVersion
 	modCompile "net.fabricmc:fabric-loader:"+project.ext.loaderVersion
 	for (String mod in project.ext.mavenMods) {
-		modCompile mod
+		modApi mod
 		include mod
 	}
 	for (String mod in project.ext.fileMods) {
-		modCompile name: mod+"-dev"
+		modApi name: mod+"-dev"
 		include name: mod
 	}
 }
