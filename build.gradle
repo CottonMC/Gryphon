@@ -15,6 +15,7 @@ plugins {
 	id 'java'
 	id 'eclipse'
 	id 'idea'
+	id "com.wynprice.cursemaven" version "1.1.0"
 }
 
 apply plugin: net.fabricmc.loom.LoomGradlePlugin
@@ -43,7 +44,7 @@ dependencies {
 	minecraft "com.mojang:minecraft:"+project.ext.minecraftVersion
 	mappings "net.fabricmc:yarn:"+project.ext.minecraftVersion+"+build."+project.ext.yarnVersion
 	modCompile "net.fabricmc:fabric-loader:"+project.ext.loaderVersion
-	for (String mod in project.ext.mavenMods) {
+	for (Object mod in project.ext.mavenMods) {
 		modApi mod
 		include mod
 	}

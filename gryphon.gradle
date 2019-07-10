@@ -23,6 +23,7 @@ ext {
     //Put all the Maven identifiers of all your mods here, separated by commas.
     //They will be included in this dev environment as well as packed into the built jar.
     //You will need to also include all dependencies here, since nested jars don't nest deep.
+    //Curse mods should be added using `curse.resolve(stub, fileid)`
     mavenMods = [
             "net.fabricmc.fabric-api:fabric-api:0.3.0+build.191",
             "io.github.prospector:modmenu:1.6.3+build.100"
